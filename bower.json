@@ -1,0 +1,14 @@
+{
+  "name": "disney-cheer-web-client",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "1.7.1",
+    "bootstrap-sass-official": "~3.1.1",
+    "loglevel": "~0.6.0",
+    "uri.js": "~1.13.2",
+    "mimer": "~0.2.1",
+    "moment": "~2.6.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,19 @@
+// Paths
+$fonts-dir: '../fonts/';
+$image-path: '../images/';
+
+// Project Colors
+$disney-red: #fc0623;
+$disney-white: #fafbfc;
+$disney-blue: #123961;
+$disney-light-blue: #3ea1ca;
+
+// Project Fonts
+$disney-sans-serif: "arvo";
+
+// Bootstrap Overrides
+$text-color: #fff;
+$body-bg: $disney-blue;
+$link-color: $disney-white;
+$link-hover-color: $disney-light-blue;
+$font-family-sans-serif: $disney-sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;

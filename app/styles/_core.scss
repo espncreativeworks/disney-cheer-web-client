@@ -1,0 +1,29 @@
+$body-gradient-start: #123961;
+$body-gradient-middle: #1b4f7d;
+$body-gradient-end: #03172e;
+
+body {
+  @include gradient-vertical-three-colors($body-gradient-start, $body-gradient-middle, 50%, $body-gradient-end);
+  min-height: 2150px;
+}
+
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+.gutterless {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+a.no-decoration {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,97 @@
+.section {
+  position: relative;
+  max-width: 730px;
+  margin-top: 22px;
+  overflow: hidden;
+  background-color: #102940;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+
+  .section-number-container {
+    font-family: 'Hots';
+    text-align: center;
+  }
+
+  &#welcome {
+    padding-top: 50px;
+
+    .section-tag {
+      font-family: 'Brannboll Fet';
+      font-size: 38px;
+      line-height: 48px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .section-title {
+      text-transform: uppercase;
+      font-family: 'Jersey Letters';
+      font-size: 86px;
+      letter-spacing: 6px;
+      word-spacing: -30px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .section-details {
+      max-width: 530px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .section-number {
+      font-size: 81px;
+      color: $disney-light-blue;
+    }
+  }
+
+  &#music {
+    padding-bottom: 20px;
+
+    .section-title {
+      font-size: 16px;
+      color: $disney-light-blue;
+      text-transform: uppercase;
+    }
+  }
+
+  &#reminder {
+
+    .section-content {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 40px;
+      font-family: 'Jersey Letters';
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .section-details {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .section {
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #reminder {
+    .cta-container {
+      padding-top: 60px;
+    }
+  }
+}
