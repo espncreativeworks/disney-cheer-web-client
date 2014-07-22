@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Home | Choose Your Disney Side</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scaleable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- build:js scripts/vendor/modernizr.js -->
@@ -72,23 +72,43 @@
       </div>
       <div class="col-xs-12 col-sm-3">
         <h3 class="section-title">Track One</h3>
-        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen">Listen</a>
-        <a href="#" class="btn btn-disney btn-block" target="_blank" title="Download">Download</a>
+        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+        <a href="audio/chicken-fat.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="track-one.mp3">Download</a>
+        <audio class="audio-player" preload="auto">
+          <source src="audio/chicken-fat.ogg" type="audio/ogg">
+          <!-- <source src="audio/chicken-fat.mp4" type="audio/mp4"> -->
+          <source src="audio/chicken-fat.mp3" type="audio/mpeg">
+        </audio>
       </div>
       <div class="col-xs-12 col-sm-3">
         <h3 class="section-title">Track Two</h3>
-        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen">Listen</a>
-        <a href="#" class="btn btn-disney btn-block" target="_blank" title="Download">Download</a>
+        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+        <a href="audio/chicken-fat.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="track-two.mp3">Download</a>
+        <audio class="audio-player" preload="auto">
+          <source src="audio/chicken-fat.ogg" type="audio/ogg">
+          <!-- <source src="audio/chicken-fat.mp4" type="audio/mp4"> -->
+          <source src="audio/chicken-fat.mp3" type="audio/mpeg">
+        </audio>
       </div>
       <div class="col-xs-12 col-sm-3">
         <h3 class="section-title">Track Three</h3>
-        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen">Listen</a>
-        <a href="#" class="btn btn-disney btn-block" target="_blank" title="Download">Download</a>
+        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+        <a href="audio/chicken-fat.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="track-three.mp3">Download</a>
+        <audio class="audio-player" preload="auto">
+          <source src="audio/chicken-fat.ogg" type="audio/ogg">
+          <!-- <source src="audio/chicken-fat.mp4" type="audio/mp4"> -->
+          <source src="audio/chicken-fat.mp3" type="audio/mpeg">
+        </audio>
       </div>
       <div class="col-xs-12 col-sm-3">
         <h3 class="section-title">Track Four</h3>
-        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen">Listen</a>
-        <a href="#" class="btn btn-disney btn-block" target="_blank" title="Download">Download</a>
+        <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+        <a href="audio/chicken-fat.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="track-four.mp3">Download</a>
+        <audio class="audio-player" preload="auto">
+          <source src="audio/chicken-fat.ogg" type="audio/ogg">
+          <!-- <source src="audio/chicken-fat.mp4" type="audio/mp4"> -->
+          <source src="audio/chicken-fat.mp3" type="audio/mpeg">
+        </audio>
       </div>
     </div>
     <div id="reminder" class="row section">
@@ -139,14 +159,12 @@
   <!-- build:js scripts/vendor.js -->
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="scripts/vendor/fastclick.js"></script>
+  <script src="bower_components/loglevel/dist/loglevel.js"></script>
   <!-- endbuild -->
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 
-  <!-- build:js(.tmp) scripts/coffee.js -->
-  <script src="scripts/hello.js"></script>
-  <!-- endbuild -->
 </body>
 </html>
