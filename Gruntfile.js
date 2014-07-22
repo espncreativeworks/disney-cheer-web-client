@@ -376,7 +376,9 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'images/{,*/}*.{webp,gif}',
-            'fonts/*'
+            'fonts/*',
+            'audio/*',
+            'video/*'
           ]
         }, {
           expand: true,
@@ -445,7 +447,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    'requirejs',
+    //'requirejs',
     'cssmin',
     'concat',
     'uglify',
