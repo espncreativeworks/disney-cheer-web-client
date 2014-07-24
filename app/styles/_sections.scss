@@ -6,6 +6,28 @@
   background-color: #102940;
   box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
 
+  .section-title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 40px;
+    font-family: 'Jersey Letters';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    color: $disney-light-blue;
+    text-transform: uppercase;
+  }
+
+  .section-details {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
   .section-number-container {
     font-family: 'Hots';
     text-align: center;
@@ -32,6 +54,10 @@
       margin-bottom: 0px;
     }
 
+    .section-subtitle {
+      font-size: 26px;
+    }
+
     .section-details {
       max-width: 530px;
       margin-left: auto;
@@ -47,14 +73,15 @@
     }
   }
 
+  &#about {
+    .section-content {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
   &#music {
     padding-bottom: 20px;
-
-    .section-title {
-      font-size: 16px;
-      color: $disney-light-blue;
-      text-transform: uppercase;
-    }
   }
 
   &#reminder {
@@ -64,21 +91,6 @@
       padding-bottom: 40px;
     }
 
-    .section-title {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 40px;
-      font-family: 'Jersey Letters';
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
-    .section-details {
-      margin-top: 0px;
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 30px;
-    }
   }
 }
 
