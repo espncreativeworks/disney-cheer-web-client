@@ -1,7 +1,47 @@
+// defaults
+$section-scale-factor: 1.6;
+
+$section-padding: 18px;
+
+$section-title-font-size: 24px;
+
+$section-subtitle-font-size: 14px;
+
+$section-details-font-size: 14px;
+$section-details-line-height: 18px;
+
+$welcome-section-title-font-size: 56px;
+$welcome-section-title-letter-spacing: 4px;
+$welcome-section-title-word-spacing: -20px;
+
+$welcome-section-subtitle-font-size: 16px;
+
+$welcome-section-tag-font-size: 22px;
+$welcome-section-tag-line-height: 19px;
+
+// min-width: $screen-sm
+$section-padding-sm: $section-padding * $section-scale-factor;
+
+$section-title-font-size-sm: $section-title-font-size * $section-scale-factor;
+
+$section-subtitle-font-size-sm: $section-subtitle-font-size * $section-scale-factor;
+
+$section-details-font-size-sm: $section-details-font-size * $section-scale-factor;
+$section-details-line-height-sm: $section-details-line-height * $section-scale-factor;
+
+$welcome-section-title-font-size-sm: $welcome-section-title-font-size * $section-scale-factor;
+$welcome-section-title-letter-spacing-sm: $welcome-section-title-letter-spacing * $section-scale-factor;
+$welcome-section-title-word-spacing-sm: $welcome-section-title-word-spacing * $section-scale-factor;
+
+$welcome-section-subtitle-font-size-sm: $welcome-section-subtitle-font-size * $section-scale-factor;
+
+$welcome-section-tag-font-size-sm: $welcome-section-tag-font-size * $section-scale-factor;
+$welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section-scale-factor;
+
 .section {
   position: relative;
   max-width: 730px;
-  margin-top: 22px;
+  margin-top: 11px;
   overflow: hidden;
   background-color: #102940;
   box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
@@ -9,23 +49,27 @@
   .section-title {
     margin-top: 0;
     margin-bottom: 14px;
-    font-size: 40px;
+    font-size: $section-title-font-size;
     font-family: 'Jersey Letters';
     text-transform: uppercase;
     letter-spacing: 3px;
   }
 
   .section-subtitle {
-    font-size: 16px;
+    font-size: $section-subtitle-font-size;
     color: $disney-light-blue;
     text-transform: uppercase;
   }
 
   .section-details {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: $section-details-font-size;
+    line-height: $section-details-line-height;
+  }
+
+  .section-content {
+    padding: $section-padding;
   }
 
   .section-number-container {
@@ -34,37 +78,36 @@
   }
 
   &#welcome {
-    padding-top: 50px;
+
+    .section-content {
+      padding-top: $section-padding * 2;
+      padding-bottom: 0;
+    }
 
     .section-tag {
       font-family: 'Brannboll Fet';
-      font-size: 38px;
-      line-height: 48px;
-      margin-top: 0px;
-      margin-bottom: 0px;
+      font-size: $welcome-section-tag-font-size;
+      line-height: $welcome-section-tag-line-height;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .section-title {
       text-transform: uppercase;
       font-family: 'Jersey Letters';
-      font-size: 86px;
-      letter-spacing: 6px;
-      word-spacing: -30px;
-      margin-top: 0px;
-      margin-bottom: 0px;
+      font-size: $welcome-section-title-font-size;
+      letter-spacing: $welcome-section-title-letter-spacing;
+      word-spacing: $welcome-section-title-word-spacing;
+      margin-bottom: 0;
     }
 
     .section-subtitle {
-      font-size: 26px;
+      font-size: $welcome-section-subtitle-font-size;
+      margin-top: 12px;
     }
 
     .section-details {
-      max-width: 530px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 24px;
-      font-size: 16px;
-      line-height: 30px;
+      margin-top: 12px;
     }
 
     .section-number {
@@ -75,20 +118,29 @@
 
   &#about {
     .section-content {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-right: 0;
+    }
+
+    ol {
+      padding-left: 15px;
     }
   }
 
   &#music {
-    padding-bottom: 20px;
+
+    .ribbon-container {
+      padding-bottom: $section-padding;
+    }
+
+    .section-content {
+      padding-top: 0;
+    }
   }
 
   &#reminder {
 
     .section-content {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-left: 0;
     }
 
   }
@@ -99,11 +151,77 @@
     min-width: 320px;
     margin-left: auto;
     margin-right: auto;
-  }
 
-  #reminder {
-    .cta-container {
-      padding-top: 60px;
+    .section-title {
+      font-size: $section-title-font-size-sm;
+    }
+
+    .section-subtitle {
+      font-size: $section-subtitle-font-size-sm;
+    }
+
+    .section-details {
+      font-size: $section-details-font-size-sm;
+      line-height: $section-details-line-height-sm;
+    }
+
+    .section-content {
+      padding: $section-padding-sm;
+    }
+
+    &#welcome {
+
+      .section-content {
+        padding-top: $section-padding-sm * 2;
+      }
+
+      .section-tag {
+        font-size: $welcome-section-tag-font-size-sm;
+        line-height: $welcome-section-tag-line-height-sm;
+      }
+
+      .section-title {
+        font-size: $welcome-section-title-font-size-sm;
+        letter-spacing: $welcome-section-title-letter-spacing-sm;
+        word-spacing: $welcome-section-title-word-spacing-sm;
+      }
+
+      .section-subtitle {
+        font-size: $welcome-section-subtitle-font-size-sm;
+
+        br {
+          display: none;
+        }
+      }
+
+      .section-details {
+        max-width: 530px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    }
+
+    &#about {
+      ol {
+        padding-left: 40px;
+      }
+    }
+
+    &#music {
+      .ribbon-container {
+        padding-bottom: $section-padding-sm;
+      }
+
+      .section-subtitle {
+        font-size: $section-subtitle-font-size-sm * .8;
+      }
+    }
+
+    &#reminder {
+      .cta-container {
+        padding-top: 60px;
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ $body-gradient-end: #03172e;
 body {
   @include gradient-vertical-three-colors($body-gradient-start, $body-gradient-middle, 50%, $body-gradient-end);
   min-height: 2150px;
+  padding-bottom: 40px;
 }
 
 .center-block {
