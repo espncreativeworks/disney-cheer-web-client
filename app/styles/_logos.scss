@@ -1,3 +1,9 @@
+$logo-disneyside-width: 188px;
+$logo-disneyside-height: 138px;
+$logo-varsity-width: 143px;
+$logo-varsity-height: 159px;
+$logo-caption-width: 86px;
+
 .logo {
   display: inline-block;
   margin: 0 auto;
@@ -18,19 +24,33 @@
 
   &.disneyside {
     display: inline-block;
-    width: 188px;
-    height: 138px;
+    width: $logo-disneyside-width;
+    height: $logo-disneyside-height;
     background-image: url($image-path + 'logo_disneyside.svg');
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
   }
 
+  &.varsity {
+    width: $logo-varsity-width;
+    height: $logo-varsity-height;
+    @include img-retina($image-path + 'logo_varsity.png', $image-path + 'logo_varsity@2x.png', $logo-varsity-width, $logo-varsity-height);
+  }
+
+}
+
+.footer-logo,
+.footer-logo-caption {
+  text-align: center;
 }
 
 .logo-caption {
   display: inline-block;
+  width: $logo-disneyside-width;
   margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
   text-transform: uppercase;
   color: #fff;
   font-family: 'futura-pt';
@@ -44,5 +64,19 @@
 html.nosvg {
   .logo.disneyside {
     background-image: url($image-path + 'logo_disneyside.png');
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .footer-logo {
+    &.disneyside {
+      text-align: right;
+    }
+    &.varsity {
+      text-align: left;
+    }
+  }
+  .logo-caption {
+    float: right;
   }
 }

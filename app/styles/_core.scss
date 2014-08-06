@@ -1,6 +1,6 @@
-$body-gradient-start: #123961;
-$body-gradient-middle: #1b4f7d;
-$body-gradient-end: #03172e;
+$body-gradient-start: #1b4f7d;
+$body-gradient-middle: $disney-white;
+$body-gradient-end: #1b4f7d;
 
 body {
   @include gradient-vertical-three-colors($body-gradient-start, $body-gradient-middle, 50%, $body-gradient-end);
