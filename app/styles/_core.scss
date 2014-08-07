@@ -5,6 +5,9 @@ $body-gradient-end: #1b4f7d;
 body {
   @include gradient-vertical-three-colors($body-gradient-start, $body-gradient-middle, 50%, $body-gradient-end);
   min-height: 2150px;
+}
+
+#footer {
   padding-bottom: 40px;
 }
 
@@ -27,4 +30,41 @@ a.no-decoration {
   &.active {
     text-decoration: none;
   }
+}
+
+@media (min-width: $screen-lg-min){
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #bg-container {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  #bg-video {
+    min-width: inherit;
+    min-height: inherit;
+  }
+
+  #body-container {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #header,
+  #footer {
+    position: relative;
+  }
+
 }

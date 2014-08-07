@@ -18,170 +18,177 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-  <div class="container">
-    <div id="header" class="row">
-      <div class="col-xs-12">
-        <div id="header-links-container" class="center-block">
-          <div class="back layer"></div>
-          <div class="middle layer"></div>
-          <div class="top layer">
-            <div class="link-container espn text-center">
-              <a href="http://espn.go.com/" class="logo espn text-hide" target="_blank" title="ESPN">ESPN</a>
-            </div>
-            <div class="link-container social">
-              <a href="javascript:void(0);" class="logo social twitter" title="Share on Twitter"><i class="fa fa-facebook"></i></a>
-              <a href="javascript:void(0);" class="logo social facebook" title="Share on Facebook"><i class="fa fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="welcome" class="row section">
-      <div class="col-xs-12 text-center section-content">
-        <h6 class="section-tag">Cheer Your</h6>
-        <h1 class="section-title">Disney Side</h1>
-        <h3 class="section-subtitle">You and your team <br>could win big!</h3>
-        <p class="section-details">Your team spirit could be the winning ticket to a <strong>$50,000 Endowment</strong> for your spirit program and a trip to the <em>Walt Disney World<sup class="reg">&reg;</sup></em> Resort. Create a fun and spirited :30 Disney Parks inspired routine showing how you feel when you visit one of the Parks. Show Us Your Disney Side!</p>
-      </div>
-      <div class="col-xs-3 gutterless">
-        <div class="ribbon-container" data-rotation-angle="35deg">
-          <div class="ribbon" data-ribbon-color="white"></div>
-          <div class="ribbon" data-ribbon-color="blue"></div>
-          <div class="ribbon" data-ribbon-color="red"></div>
-        </div>
-      </div>
-      <div class="col-xs-6">
-        <div class="section-number-container">
-          <div class="section-number">1</div>
-        </div>
-      </div>
-      <div class="col-xs-3 gutterless">
-        <div class="ribbon-container" data-rotation-angle="-35deg">
-          <div class="ribbon" data-ribbon-color="white"></div>
-          <div class="ribbon" data-ribbon-color="blue"></div>
-          <div class="ribbon" data-ribbon-color="red"></div>
-        </div>
-      </div>
-    </div>
-    <div id="about" class="row section">
-      <div class="col-xs-10 section-content">
-        <h1 class="section-title">Details</h1>
-        <div class="section-details">
-          <p>To enter for a chance to win, follow these simple steps:</p>
-          <ol>
-            <li>Check out this video for inspiration.</li>
-            <li>Download one of the Disney Park attraction Remixes below to use for your :30 routine.</li>
-            <li>Create a cool and unique routine based off the feeling you have when you visit a Disney Park.</li>
-            <li>Comeback on August 30th to download your routine.</li>
-            <li>See <a href="#" class="no-decoration" title="Official Rules">rules</a> for details.</li>
-          </ol>
-          <p>This is not a skills based competition so be creative and have fun!!!</p>
-        </div>
-      </div>
-      <div class="col-xs-1 col-xs-offset-1 gutterless">
-        <div class="ribbon-container" data-rotation-angle="270deg">
-          <div class="ribbon" data-ribbon-color="white"></div>
-          <div class="ribbon" data-ribbon-color="blue"></div>
-          <div class="ribbon" data-ribbon-color="red"></div>
-        </div>
-      </div>
-    </div>
-    <div id="music" class="row section">
-      <div class="col-xs-12 gutterless">
-        <div class="ribbon-container">
-          <div class="ribbon" data-ribbon-color="white"></div>
-          <div class="ribbon" data-ribbon-color="blue"></div>
-          <div class="ribbon" data-ribbon-color="red"></div>
-        </div>
-      </div>
-      <div class="row section-content">
+  <div id="bg-container" class="visible-lg">
+    <video id="bg-video" autoplay loop preload="auto">
+      <source type="video/mp4" src="video/bg.mp4">
+      <source type="video/webm" src="video/bg.webm">
+      <source type="video/ogg" src="video/bg.ogv">
+    </video>
+  </div>
+  <div id="body-container">
+    <div class="container">
+      <div id="header" class="row">
         <div class="col-xs-12">
-          <h1 class="section-title">Music</h1>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <h3 class="section-subtitle">It's a small world<sup class="reg">&reg;</sup></h3>
-          <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
-          <a href="audio/its-a-small-world.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="its-a-small-world.mp3">Download</a>
-          <audio class="audio-player" preload="auto">
-            <source src="audio/its-a-small-world.mp3" type='audio/mpeg; codecs="mp3"'>
-            <source src="audio/its-a-small-world.ogg" type='audio/ogg; codecs="vorbis"'>
-            <source src="audio/its-a-small-world.wav" type='audio/wav'>
-          </audio>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <h3 class="section-subtitle">Enchanted Tiki Room<sup class="reg">&reg;</sup></h3>
-          <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
-          <a href="audio/enchanted-tiki-room.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="enchanted-tiki-room.mp3">Download</a>
-          <audio class="audio-player" preload="auto">
-            <source src="audio/enchanted-tiki-room.mp3" type='audio/mpeg; codecs="mp3"'>
-            <source src="audio/enchanted-tiki-room.ogg" type='audio/ogg; codecs="vorbis"'>
-            <source src="audio/enchanted-tiki-room.wav" type='audio/wav'>
-          </audio>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <h3 class="section-subtitle">Haunted Mansion<sup class="reg">&reg;</sup></h3>
-          <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
-          <a href="audio/haunted-mansion.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="haunted-mansion.mp3">Download</a>
-          <audio class="audio-player" preload="auto">
-            <source src="audio/haunted-mansion.mp3" type='audio/mpeg; codecs="mp3"'>
-            <source src="audio/haunted-mansion.ogg" type='audio/ogg; codecs="vorbis"'>
-            <source src="audio/haunted-mansion.wav" type='audio/wav'>
-          </audio>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <h3 class="section-subtitle">Pirates of the Caribbean<sup class="reg">&reg;</sup></h3>
-          <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
-          <a href="audio/pirates-of-the-caribbean.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="pirates-of-the-caribbean.mp3">Download</a>
-          <audio class="audio-player" preload="auto">
-            <source src="audio/pirates-of-the-caribbean.mp3" type='audio/mpeg; codecs="mp3"'>
-            <source src="audio/pirates-of-the-caribbean.ogg" type='audio/ogg; codecs="vorbis"'>
-            <source src="audio/pirates-of-the-caribbean.wav" type='audio/wav'>
-          </audio>
-        </div>
-      </div>
-    </div>
-    <div id="reminder" class="row section">
-      <div class="col-xs-1 gutterless">
-        <div class="ribbon-container" data-rotation-angle="270deg">
-          <div class="ribbon" data-ribbon-color="white"></div>
-          <div class="ribbon" data-ribbon-color="blue"></div>
-          <div class="ribbon" data-ribbon-color="red"></div>
-        </div>
-      </div>
-      <div class="col-xs-10 col-xs-offset-1 section-content">
-        <div class="row">
-          <div class="col-xs-12 col-sm-8">
-            <h1 class="section-title">Remind Me</h1>
-            <p class="section-details">Yes, sign me up for future updates regarding this promotion.</p>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="cta-container">
-              <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Sign Me Up">Sign Me Up</a>
+          <div id="header-links-container" class="center-block">
+            <div class="back layer"></div>
+            <div class="middle layer"></div>
+            <div class="top layer">
+              <div class="link-container espn text-center">
+                <a href="http://espn.go.com/" class="logo espn text-hide" target="_blank" title="ESPN">ESPN</a>
+              </div>
+              <div class="link-container social">
+                <a href="javascript:void(0);" class="logo social twitter" title="Share on Twitter"><i class="fa fa-facebook"></i></a>
+                <a href="javascript:void(0);" class="logo social facebook" title="Share on Facebook"><i class="fa fa-twitter"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="rules" class="row section">
-
-    </div>
-    <div id="footer" class="row">
-      <!-- disneyside logo -->
-      <div class="col-xs-12 col-sm-6">
-        <div class="row">
-          <div class="col-xs-12 footer-logo disneyside">
-            <a class="logo disneyside svg-bg text-hide" href="#" data-backup-img="logo_disneyside.png">Show your Disney Side</a>
+      <div id="welcome" class="row section">
+        <div class="col-xs-12 text-center section-content">
+          <h6 class="section-tag">Cheer On Your</h6>
+          <h1 class="section-title">Disney Side</h1>
+          <h3 class="section-subtitle">You and your team <br>could win a <strong>$50,000 Endowment</strong> for your spirit program!</h3>
+          <p class="section-details">Your team spirit could be the winning ticket to a <strong>$50,000 Endowment</strong> for your spirit program and a trip to the <em>Walt Disney World<sup class="reg">&reg;</sup></em> Resort. Create a fun and spirited :30 Disney Parks inspired routine showing how you feel when you visit one of the Parks. Show Us Your Disney Side!</p>
+        </div>
+        <div class="col-xs-3 gutterless">
+          <div class="ribbon-container" data-rotation-angle="35deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
           </div>
-          <div class="col-xs-12 footer-logo-caption disneyside">
-            <a class="logo-caption no-decoration" href="https://twitter.com/search?q=%23disneyside" title="#DISNEYSIDE" target="_blank"><span class="hash">#</span>disneyside</a>
+        </div>
+        <div class="col-xs-6">
+          <div class="section-number-container">
+            <div class="section-number">1</div>
+          </div>
+        </div>
+        <div class="col-xs-3 gutterless">
+          <div class="ribbon-container" data-rotation-angle="-35deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
           </div>
         </div>
       </div>
-      <!-- varsity logo -->
-      <div class="col-xs-12 col-sm-6">
-        <div class="row">
-          <div class="col-xs-12 footer-logo varsity">
-            <a href="#" class="logo varsity text-hide" title="Varsity Spirit">Varsity Spirit</a>
+      <div id="about" class="row section">
+        <div class="col-xs-10 section-content">
+          <h1 class="section-title">Details</h1>
+          <div class="section-details">
+            <p>To enter for a chance to win, follow these simple steps:</p>
+            <ol>
+              <!-- <li>Check out this video for inspiration.</li> -->
+              <li>Download one of the Disney Park attraction Remixes below to use for your :30 routine.</li>
+              <li>Create a cool and unique routine based off the feeling you have when you visit a Disney Park.</li>
+              <li>Comeback on Sept. 3 - Nov. 11 to upload your routine.</li>
+              <li>See <a href="#" class="no-decoration" title="Routine Criteria">routine criteria</a> / <a href="#" class="no-decoration" title="Contest Rules">contest rules</a> for details.</li>
+            </ol>
+            <p>This is not a skills based competition so be creative and have fun!!!</p>
+          </div>
+        </div>
+        <div class="col-xs-1 col-xs-offset-1 gutterless">
+          <div class="ribbon-container" data-rotation-angle="270deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
+          </div>
+        </div>
+      </div>
+      <div id="music" class="row section">
+        <div class="col-xs-12 gutterless">
+          <div class="ribbon-container">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
+          </div>
+        </div>
+        <div class="row section-content">
+          <div class="col-xs-12">
+            <h1 class="section-title">Music Tracks</h1>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <h3 class="section-subtitle">It's a small world<sup class="reg">&reg;</sup></h3>
+            <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+            <a href="audio/its-a-small-world.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="its-a-small-world.mp3">Download</a>
+            <audio class="audio-player" preload="auto">
+              <source src="audio/its-a-small-world.mp3" type='audio/mpeg; codecs="mp3"'>
+              <source src="audio/its-a-small-world.ogg" type='audio/ogg; codecs="vorbis"'>
+              <source src="audio/its-a-small-world.wav" type='audio/wav'>
+            </audio>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <h3 class="section-subtitle">Enchanted Tiki Room<sup class="reg">&reg;</sup></h3>
+            <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+            <a href="audio/enchanted-tiki-room.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="enchanted-tiki-room.mp3">Download</a>
+            <audio class="audio-player" preload="auto">
+              <source src="audio/enchanted-tiki-room.mp3" type='audio/mpeg; codecs="mp3"'>
+              <source src="audio/enchanted-tiki-room.ogg" type='audio/ogg; codecs="vorbis"'>
+              <source src="audio/enchanted-tiki-room.wav" type='audio/wav'>
+            </audio>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <h3 class="section-subtitle">Haunted Mansion<sup class="reg">&reg;</sup></h3>
+            <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+            <a href="audio/haunted-mansion.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="haunted-mansion.mp3">Download</a>
+            <audio class="audio-player" preload="auto">
+              <source src="audio/haunted-mansion.mp3" type='audio/mpeg; codecs="mp3"'>
+              <source src="audio/haunted-mansion.ogg" type='audio/ogg; codecs="vorbis"'>
+              <source src="audio/haunted-mansion.wav" type='audio/wav'>
+            </audio>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <h3 class="section-subtitle">Pirates of the Caribbean<sup class="reg">&reg;</sup></h3>
+            <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Listen" data-control-action="toggle-audio">Listen</a>
+            <a href="audio/pirates-of-the-caribbean.mp3" class="btn btn-disney btn-block" target="_blank" title="Download" download="pirates-of-the-caribbean.mp3">Download</a>
+            <audio class="audio-player" preload="auto">
+              <source src="audio/pirates-of-the-caribbean.mp3" type='audio/mpeg; codecs="mp3"'>
+              <source src="audio/pirates-of-the-caribbean.ogg" type='audio/ogg; codecs="vorbis"'>
+              <source src="audio/pirates-of-the-caribbean.wav" type='audio/wav'>
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div id="reminder" class="row section">
+        <div class="col-xs-1 gutterless">
+          <div class="ribbon-container" data-rotation-angle="270deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 section-content">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8">
+              <h1 class="section-title">Remind Me</h1>
+              <p class="section-details">Yes, sign me up for future updates regarding this promotion.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="cta-container">
+                <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Sign Me Up">Sign Me Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rules" class="row section"></div>
+      <div id="footer" class="row">
+        <!-- disneyside logo -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <div class="col-xs-12 footer-logo disneyside">
+              <a class="logo disneyside svg-bg text-hide" href="#" data-backup-img="logo_disneyside.png">Show your Disney Side</a>
+            </div>
+            <div class="col-xs-12 footer-logo-caption disneyside">
+              <a class="logo-caption no-decoration" href="https://twitter.com/search?q=%23disneyside" title="#DISNEYSIDE" target="_blank"><span class="hash">#</span>disneyside</a>
+            </div>
+          </div>
+        </div>
+        <!-- varsity logo -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <div class="col-xs-12 footer-logo varsity">
+              <a href="http://www.varsity.com/" class="logo varsity text-hide" title="Varsity Spirit">Varsity Spirit</a>
+            </div>
           </div>
         </div>
       </div>
