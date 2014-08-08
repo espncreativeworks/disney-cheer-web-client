@@ -1,4 +1,4 @@
-/* global jQuery, document, FastClick, log */
+/* global jQuery, document, FastClick, log, ga */
 jQuery(document).ready(function($){
   'use strict';
 
@@ -27,5 +27,17 @@ jQuery(document).ready(function($){
       $this.text('Listen');
     }
   });
+
+  // track audio downloads
+  $('#music').on('click', '[data-control-action="download"]', trackDownload);
+
+  function trackDownload (e){
+    var $track = $(e.target)
+      , type = 'Audio'
+      , description = 'Download'
+      , label = $track.attr('href');
+
+    ga('send', 'event', type, description, label);
+  }
 
 });
