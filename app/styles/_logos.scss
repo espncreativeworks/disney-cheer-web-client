@@ -1,7 +1,7 @@
 $logo-disneyside-width: 188px;
 $logo-disneyside-height: 138px;
-$logo-varsity-width: 143px;
-$logo-varsity-height: 159px;
+$logo-varsity-width: 117px;
+$logo-varsity-height: 131px;
 $logo-caption-width: 86px;
 
 .logo {
@@ -35,7 +35,7 @@ $logo-caption-width: 86px;
   &.varsity {
     width: $logo-varsity-width;
     height: $logo-varsity-height;
-    @include img-retina($image-path + 'logo_varsity.png', $image-path + 'logo_varsity@2x.png', $logo-varsity-width, $logo-varsity-height);
+    @include img-retina($image-path + 'logo_varsity_white.png', $image-path + 'logo_varsity_white@2x.png', $logo-varsity-width, $logo-varsity-height);
   }
 
 }
