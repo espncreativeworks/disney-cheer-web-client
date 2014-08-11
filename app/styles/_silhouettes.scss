@@ -1,0 +1,14 @@
+$silhouette-width: 49px;
+$silhouette-height: 89px;
+
+.silhouette-container {
+  width: 100%;
+  min-height: $silhouette-height;
+
+  .silhouette {
+    @include center-block();
+    width: $silhouette-width;
+    height: $silhouette-height;
+    @include img-retina($image-path + 'icon_silhouette.png', $image-path + 'icon_silhouette@2x.png', $silhouette-width, $silhouette-height);
+  }
+}
