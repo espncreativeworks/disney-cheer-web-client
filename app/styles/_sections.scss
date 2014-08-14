@@ -114,6 +114,15 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
       font-size: 81px;
       color: $disney-light-blue;
     }
+
+    .cta-container {
+      font-size: 81px;
+      text-align: center;
+
+      .cta {
+        font-size: inherit;
+      }
+    }
   }
 
   &#about {
@@ -226,8 +235,10 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
   }
 }
 
+/*
 @media (min-width: $screen-lg-min){
   .section {
     background-color: transparentize($section-bg-color, 0.4);
   }
 }
+*/

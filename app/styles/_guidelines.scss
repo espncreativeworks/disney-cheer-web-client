@@ -1,0 +1,13 @@
+.guideline-container {
+
+  .guideline-heading,
+  .guideline-content {
+    text-align: center;
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .guideline-container {
+    min-height: 200px;
+  }
+}

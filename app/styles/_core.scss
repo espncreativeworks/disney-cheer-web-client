@@ -32,6 +32,21 @@ a.no-decoration {
   }
 }
 
+#colorbox,
+#colorbox *,
+#colorbox *:before,
+#colorbox *:after,
+[id^="cbox"],
+[id^="cbox"] *,
+[id^="cbox"] *:before,
+[id^="cbox"] *:after, {
+  @include box-sizing(content-box);
+}
+
+#colorbox {
+  padding-right: 44px !important;
+}
+
 @media (min-width: $screen-lg-min){
   html, body {
     margin: 0px;
