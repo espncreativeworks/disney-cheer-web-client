@@ -7,6 +7,12 @@ body {
   min-height: 2150px;
 }
 
+#notifications {
+  max-width: $disney-section-max-width;
+  padding-top: 20px;
+  @include center-block();
+}
+
 #footer {
   padding-bottom: 40px;
 }

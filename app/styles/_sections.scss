@@ -40,7 +40,7 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
 
 .section {
   position: relative;
-  max-width: 730px;
+  max-width: $disney-section-max-width;
   margin-top: 11px;
   overflow: hidden;
   background-color: $section-bg-color;
