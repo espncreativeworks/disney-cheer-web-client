@@ -125,6 +125,22 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
     }
   }
 
+  &#how-to {
+
+    .ribbon-container {
+      padding-bottom: $section-padding;
+    }
+
+    .video-container {
+      background-color: #000;
+
+      .video-player {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
   &#about {
     .section-content {
       padding-right: 0;
@@ -152,6 +168,12 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
       padding-left: 0;
     }
 
+  }
+
+  &#additional-info {
+    .ribbon-container {
+      padding-bottom: $section-padding;
+    }
   }
 }
 
@@ -211,6 +233,12 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
 
     }
 
+    #how-to {
+      .ribbon-container {
+        padding-bottom: $section-padding-sm;
+      }
+    }
+
     &#about {
       ol {
         padding-left: 40px;
@@ -230,6 +258,12 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
     &#reminder {
       .cta-container {
         padding-top: 60px;
+      }
+    }
+
+    &#additional-info {
+      .ribbon-container {
+        padding-bottom: $section-padding-sm;
       }
     }
   }

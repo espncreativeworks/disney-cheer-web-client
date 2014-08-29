@@ -1,0 +1,231 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Upload | Choose Your Disney Side</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <script type="text/javascript" src="//use.typekit.net/psd0lya.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body class="upload">
+  <div id="bg-container" class="visible-lg">
+    <!--
+    <video id="bg-video" muted autoplay loop preload="auto">
+      <source type="video/mp4" src="video/bg_varsity.mp4">
+      <source type="video/webm" src="video/bg_varsity.webm">
+      <source type="video/ogg" src="video/bg_varsity.ogv">
+    </video>
+    -->
+  </div>
+  <div id="body-container">
+    <div class="container">
+      <div id="header" class="row">
+        <div class="col-xs-12">
+          <div id="header-links-container" class="center-block">
+            <div class="back layer"></div>
+            <div class="middle layer"></div>
+            <div class="top layer">
+              <div class="link-container espn text-center">
+                <a href="index.html" class="logo espn text-hide" title="Home">ESPN</a>
+              </div>
+              <div class="link-container social">
+                <a href="javascript:void(0);" class="logo social twitter" title="Share on Twitter" data-control-action="share-twitter" data-tweet-url="http://es.pn/1qaEAdr" data-tweet-text="Your team could win you $100,000 Grant for your spirit program and a trip to the Walt Disney World Resort" data-related-accounts="DisneyParks,varsityupdates,ESPNPromotions"><i class="fa fa-twitter"></i></a>
+                <a href="javascript:void(0);" class="logo social facebook" title="Share on Facebook" data-control-action="share-facebook" data-share-url="http://es.pn/1qaEAdr"><i class="fa fa-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="welcome" class="row section">
+        <div class="col-xs-12 text-center section-content">
+          <h6 class="section-tag">Cheer On Your</h6>
+          <h1 class="section-title">Disney Side</h1>
+          <h3 class="section-subtitle">Upload Your Routine</h3>
+          <div class="section-details">
+            <div class="upload-container text-left">
+
+              <ul class="upload-specifications list-unstyled">
+                <li><span class="specification-name">Accepted video file types</span>: .mov, .mp4, .mpeg4, .m4v, .wmv, 3GPP, WebM</li>
+                <li><span class="specification-name">File size</span>: must not exceed 15MB</li>
+                <li><span class="specification-name">Video duration</span>: must be 30 seconds or less</li>
+              </ul>
+
+              <div class="row upload-form-container">
+                <div class="col-xs-12">
+                  <div class="feedback-container center-block">
+                    <div class="thumbnail-placeholder">
+                      <div class="thumbnail-icon-container">
+                        <span class="icon-disney fa fa-cloud-upload" data-icon-state="default"></span>
+                        <span class="icon-disney fa fa-cog icon-spin" data-icon-state="progress"></span>
+                        <span class="icon-disney fa fa-film" data-icon-state="complete"></span>
+                        <span class="icon-disney fa fa-warning-sign" data-icon-state="warning"></span>
+                      </div>
+                    </div>
+                    <div class="feedback">
+                      <p class="message">Select video to upload</p>
+                      <div class="progress-container">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="file-info">
+                        <ul class="list-unstyled">
+                          <li class="file-name-container">File name: <span id="file-name"></span>
+                          </li>
+                          <li class="file-size-container">File size: <span id="file-size"></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <form id="video-upload" action="thanks.html" role="form" enctype="multipart/form-data" method="GET" data-notify-url="http://disney-cheer.herokuapp.com/api/uploads">
+
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <label for="school">School</label>
+                        <input type="text" name="school" id="school" class="form-control" placeholder="Enter Your School's Name..." required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <label for="track">Track</label>
+                        <select name="track" id="track" class="form-control" required>
+                          <option value="-1">Choose your track...</option>
+                          <option value="iasw">It's a Small World</option>
+                          <option value="etr">Enchanted Tiki Room</option>
+                          <option value="hm">Haunted Mansion</option>
+                          <option value="potc">Pirates of the Caribbean</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" class="form-control" placeholder="A description of your routine..."></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-xs-12 hide">
+                        <input type="hidden" name="next" value="submit">
+                        <input type="hidden" name="userId" value="-99999999">
+                        <input type="hidden" name="username" value="john-doe">
+                        <input type="hidden" name="userAccountId" value="-99999999">
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 btn-container">
+                        <input type="file" name="video-file" accept="video/quicktime,video/x-quicktime,video/mp4,video/mpeg,video/m4v,video/x-m4v,video/wmv,video/x-ms-wmv,video/ogv,video/ogg,audio/ogg,video/3pp,video/webm,video/x-webm" data-control-action="select-video-file">
+                        <button class="btn btn-disney btn-block has-children" data-control-action="select-video">
+                          <span class="btn-text">Select Video</span>
+                          <span class="btn-icon fa fa-folder-open"></span>
+                        </button>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 btn-container">
+                        <button type="submit" class="btn btn-disney btn-block has-children" data-control-action="submit-video" disabled="disabled">
+                          <span class="btn-text">Submit Video</span>
+                          <span class="btn-icon fa fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-3 gutterless">
+          <div class="ribbon-container" data-rotation-angle="35deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="silhoutte-container">
+            <div class="silhouette"></div>
+          </div>
+        </div>
+        <div class="col-xs-3 gutterless">
+          <div class="ribbon-container" data-rotation-angle="-35deg">
+            <div class="ribbon" data-ribbon-color="white"></div>
+            <div class="ribbon" data-ribbon-color="blue"></div>
+            <div class="ribbon" data-ribbon-color="red"></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="row">
+        <!-- disneyside logo -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <div class="col-xs-12 footer-logo disneyside">
+              <a class="logo disneyside svg-bg text-hide" href="#" data-backup-img="logo_disneyside.png">Show your Disney Side</a>
+            </div>
+            <div class="col-xs-12 footer-logo-caption disneyside">
+              <a class="logo-caption no-decoration" href="https://twitter.com/search?q=%23disneyside" title="#DISNEYSIDE" target="_blank"><span class="hash">#</span>disneyside</a>
+            </div>
+          </div>
+        </div>
+        <!-- varsity logo -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <div class="col-xs-12 footer-logo varsity">
+              <a href="http://www.varsity.com/" class="logo varsity text-hide" title="Varsity Spirit">Varsity Spirit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38720475-12', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <!-- Facebook SDK -->
+  <script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- build:js scripts/vendor.js -->
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="scripts/vendor/bootstrap.js"></script>
+  <script src="scripts/vendor/fastclick.js"></script>
+  <script src="bower_components/loglevel/dist/loglevel.js"></script>
+  <script src="bower_components/mimer/dist/mimer.min.js"></script>
+  <!-- endbuild -->
+
+  <script src="//assets.transloadit.com/js/jquery.transloadit2-v2-latest.js"></script>
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/utils/human-readable.js"></script>
+  <script src="scripts/upload.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

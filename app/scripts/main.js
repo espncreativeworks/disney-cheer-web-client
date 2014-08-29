@@ -45,7 +45,12 @@ jQuery(document).ready(function($){
   // track audio downloads, plays
   $('#music').on('click', '[data-control-action="download"]', trackAudioDownload);
   $('.audio-player').each(function(){
-    $(this).one('playing', trackPlay);
+    $(this).one('playing', trackAudioPlay);
+  });
+
+  // track video plays
+  $('.video-player').each(function(){
+    $(this).one('playing', trackVideoPlay);
   });
 
   // track routine downloads
@@ -60,11 +65,20 @@ jQuery(document).ready(function($){
     ga('send', 'event', type, description, label);
   }
 
-  function trackPlay(e){
+  function trackAudioPlay(e){
     var $track = $(e.target)
       , type = 'Audio'
       , description = 'Play'
       , label = $track.get(0).currentSrc;
+
+    ga('send', 'event', type, description, label);
+  }
+
+  function trackVideoPlay(e){
+    var $video = $(e.target)
+      , type = 'Video'
+      , description = 'Play'
+      , label = $video.get(0).currentSrc;
 
     ga('send', 'event', type, description, label);
   }

@@ -1,0 +1,32 @@
+.tile-container {
+  width: 305px;
+  height: 305px;
+
+  .tile {
+    float: left;
+    width: inherit;
+    height: inherit;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .tile-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.disneyside .tile {
+    background-image: url($image-path + 'bg_tile_disneyside.png');
+  }
+
+  &.special-offers .tile {
+    background-image: url($image-path + 'bg_tile_special_offers.png');
+  }
+
+  &.vacation-planning .tile {
+    background-image: url($image-path + 'bg_tile_vacation_planning.png');
+  }
+}

@@ -1,0 +1,261 @@
+$feedback-container-min-width: 100px;
+$feedback-container-max-width: 200px;
+$feedback-container-min-height: 150px;
+$feedback-container-max-height: 200px;
+
+$file-input-width-default: 212px;
+$file-input-height-default: 49px;
+$file-input-width-sm: 143px;
+$file-input-height-sm: 37px;
+$file-input-width-md: $file-input-width-sm;
+$file-input-height-md: $file-input-height-sm;
+$file-input-width-lg: 210px;
+$file-input-height-lg: 49px;
+
+.upload-container {
+
+  .upload-specifications {
+    padding: 0;
+    margin: 0;
+  }
+
+  .upload-specifications li {
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
+
+  .upload-specifications li:before {
+    content: "•";
+    color: $disney-red;
+    padding-right: 12px;
+  }
+
+  .upload-form-container {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .feedback-container {
+    font-size: 11px;
+    min-width: $feedback-container-min-width;
+    max-width: $feedback-container-max-width;
+    min-height: $feedback-container-min-height;
+    max-height: $feedback-container-max-width;
+  }
+
+  .feedback-container .thumbnail-placeholder {
+    min-width: inherit;
+    max-width: inherit;
+    min-height: $feedback-container-min-height * .80;
+    max-height: $feedback-container-max-height * .80;
+    border: 3px dashed $disney-red;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .feedback-container .thumbnail-icon-container {
+    width: 60%;
+    min-height: inherit;
+    max-height: inherit;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 66px;
+    padding-top: 0px;
+
+    .icon-disney {
+      display: none;
+      line-height: 120px;
+    }
+
+    [data-icon-state="default"] {
+      display: inline;
+    }
+  }
+
+  .feedback-container .feedback {
+    min-width: inherit;
+    max-width: inherit;
+    min-height: $feedback-container-min-height * .20;
+    max-height: $feedback-container-max-height * .20;
+  }
+
+  .feedback-container .message,
+  .feedback-container .progress,
+  .feedback-container .file-info {
+    display: none;
+  }
+
+  .feedback-container.has-message {
+    .message {
+      display: block;
+    }
+
+    [data-icon-state="default"],
+    [data-icon-state="progress"],
+    [data-icon-state="complete"] {
+      display: none;
+    }
+
+    [data-icon-state="warning"] {
+      display: inline;
+    }
+  }
+
+
+
+  .feedback-container.has-progress {
+    .progress {
+      display: block;
+    }
+
+    [data-icon-state="default"],
+    [data-icon-state="warning"],
+    [data-icon-state="complete"] {
+      display: none;
+    }
+
+    [data-icon-state="progress"] {
+      display: inline;
+    }
+  }
+
+  .feedback-container.has-file-info {
+    .file-info {
+      display: block;
+    }
+
+    [data-icon-state="default"],
+    [data-icon-state="warning"],
+    [data-icon-state="progress"] {
+      display: none;
+    }
+
+    [data-icon-state="complete"] {
+      display: inline;
+    }
+  }
+
+  [name="description"] {
+    min-height: 100px;
+    padding: 12px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    resize: none;
+  }
+
+  input[type="file"] {
+    position: relative;
+    opacity: 0;
+    width: $file-input-width-default;
+    height: $file-input-height-default;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  input[type="file"] + button[data-control-action="select-video"] {
+    position: relative;
+    top: -($file-input-height-default);
+    z-index: 0;
+  }
+
+  // display lg, .center-block
+  input[type="file"],
+  [data-control-action="select-video"],
+  [data-control-action="submit-video"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    line-height: 1.33;
+  }
+
+  .btn-container {
+    max-height: $file-input-height-default;
+  }
+
+  .form-group {
+    float: left;
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  .form-group label {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 8px;
+  }
+}
+
+/*
+@media (min-width: $screen-sm-min){
+  .upload-container {
+
+    input[type="file"] {
+      width: $file-input-width-sm;
+      height: $file-input-height-sm;
+    }
+
+    input[type="file"] + button[data-control-action="select-video"] {
+      top: -($file-input-height-sm);
+    }
+
+    // reset display
+    input[type="file"],
+    [data-control-action="select-video"],
+    [data-control-action="submit-video"] {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: $font-size-base * 0.8;
+      line-height: $line-height-base * 0.8;
+    }
+
+  }
+}
+
+@media (min-width: $screen-md-min){
+  .upload-container {
+
+    input[type="file"] {
+      width: $file-input-width-md;
+      height: $file-input-height-md;
+    }
+
+    input[type="file"] + button[data-control-action="select-video"] {
+      top: -($file-input-height-md);
+    }
+
+    [name="description"] {
+      margin-top: 0px;
+    }
+
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  .upload-container {
+
+    input[type="file"] {
+      width: $file-input-width-lg;
+      height: $file-input-height-lg;
+    }
+
+    input[type="file"] + button[data-control-action="select-video"] {
+      top: -($file-input-height-lg);
+    }
+
+    // reset display
+    input[type="file"],
+    [data-control-action="select-video"],
+    [data-control-action="submit-video"] {
+      padding-left: 6px;
+      padding-right: 6px;
+      font-size: 19px;
+      line-height: 1.33;
+    }
+  }
+}
+*/
