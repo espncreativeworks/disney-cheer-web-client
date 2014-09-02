@@ -88,12 +88,12 @@
                   </div>
                 </div>
                 <div class="col-xs-12">
-                  <form id="video-upload" action="thanks.html" role="form" enctype="multipart/form-data" method="GET" data-notify-url="http://disney-cheer.herokuapp.com/api/uploads">
+                  <form id="video-upload" action="thanks.html" role="form" enctype="multipart/form-data" method="POST" data-notify-url="http://e8d04d0.ngrok.com/api/uploads">
 
                     <div class="form-group">
                       <div class="col-xs-12">
                         <label for="school">School</label>
-                        <input type="text" name="school" id="school" class="form-control" placeholder="Enter Your School's Name..." required>
+                        <input type="text" name="school" id="school" class="form-control" placeholder="Enter your school's Full Name..." required minlength="3">
                       </div>
                     </div>
                     <div class="form-group">
@@ -101,10 +101,10 @@
                         <label for="track">Track</label>
                         <select name="track" id="track" class="form-control" required>
                           <option value="-1">Choose your track...</option>
-                          <option value="iasw">It's a Small World</option>
-                          <option value="etr">Enchanted Tiki Room</option>
-                          <option value="hm">Haunted Mansion</option>
-                          <option value="potc">Pirates of the Caribbean</option>
+                          <option value="its-a-small-world">It's a Small World</option>
+                          <option value="enchanted-tiki-room">Enchanted Tiki Room</option>
+                          <option value="haunted-mansion">Haunted Mansion</option>
+                          <option value="pirates-of-the-caribbean">Pirates of the Caribbean</option>
                         </select>
                       </div>
                     </div>
@@ -154,7 +154,7 @@
           </div>
         </div>
         <div class="col-xs-6">
-          <div class="silhoutte-container">
+          <div class="silhouette-container">
             <div class="silhouette"></div>
           </div>
         </div>

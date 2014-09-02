@@ -1,0 +1,37 @@
+.confirm-form-container {
+  .optin-copy {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .control-group.main-controls {
+    padding-top: 40px;
+
+    .btn-disney {
+      display: block;
+      width: 100%;
+      margin-bottom: 22px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .confirm-form-container {
+
+    .control-group.main-controls {
+      .btn-disney {
+        display: inline-block;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0px;
+      }
+      .btn.logout {
+        margin-right: 22px;
+      }
+    }
+  }
+
+}

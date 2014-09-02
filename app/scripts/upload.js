@@ -97,7 +97,7 @@ jQuery(document).ready(function ($){
           $fileInfo.find('#file-name').text(_file.name);
           $fileInfo.find('#file-size').text(window.espncw.humanReadable.fromBytes(_file.size));
           $feedbackContainer.removeClass('has-progress has-message').addClass('has-file-info');
-          $submitBtn.removeAttr('disabled');
+          //$submitBtn.removeAttr('disabled');
         } else if (!_validMimeType){
           $message.text('Invalid file type. Please select a video with a valid file type.');
           $feedbackContainer.removeClass('has-progress has-file-info').addClass('has-message');
@@ -141,6 +141,64 @@ jQuery(document).ready(function ($){
     }, onTransloaditSuccess = function(assembly){
       log.info('[transloadit Success]');
       log.info(assembly);
+    }, fileIsValid = function ($file){
+      return $file.get(0).files.length > 0;
+    }, schoolIsValid = function ($school){
+      return $school.val().trim().length > 3;
+    }, trackIsValid = function ($track){
+      return $track.val() !== '-1';
+    }, feedbackSchool = function ($school, isValid){
+      if (!isValid){
+        $school.parents('.form-group').addClass('has-error');
+      } else {
+        $school.parents('.form-group').removeClass('has-error');
+      }
+    }, feedbackTrack = function ($track, isValid){
+      if (!isValid){
+        $track.parents('.form-group').addClass('has-error');
+      } else {
+        $track.parents('.form-group').removeClass('has-error');
+      }
+    }, onFormSubmit = function (e){
+      var $form = $(this)
+        , $school = $form.find('input[name="school"]')
+        , $track = $form.find('input[name="track"]')
+        , invalids = [];
+
+      if (!schoolIsValid($school)){
+        feedbackSchool($school, schoolIsValid($school));
+        invalids.push($school);
+      }
+
+      if (!trackIsValid($track)){
+        feedbackTrack($track, trackIsValid($track));
+        invalids.push($track);
+      }
+
+      if (invalids.length !== 0){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+      }
+
+    }, onTrackChange = function (){
+      var $track = $(this);
+      feedbackTrack($track, trackIsValid($track));
+    }, onSchoolChange = function (){
+      var $school = $(this);
+      feedbackSchool($school, schoolIsValid($school));
+    }, onFormChange = function (){
+      var $form = $('#video-upload')
+        , $school = $form.find('input[name="school"]')
+        , $track = $form.find('input[name="track"]')
+        , $file = $form.find('input[name="video-file"]')
+        , $submitBtn = $('[data-control-action="submit-video"]');
+
+      if (schoolIsValid($school) && trackIsValid($track) && fileIsValid($file)){
+        $submitBtn.removeAttr('disabled');
+      } else {
+        $submitBtn.attr('disabled', true);
+      }
     };
 
   function init(){
@@ -170,6 +228,11 @@ jQuery(document).ready(function ($){
         onError: onTransloaditError,
         onSuccess: onTransloaditSuccess
       };
+
+      $form.on('change', '[name="video-file"], [name="school"], [name="track"]', onFormChange);
+      $form.on('change', '[name="school"]', onSchoolChange);
+      $form.on('change', '[name="track"]', onTrackChange);
+      $form.on('submit', onFormSubmit);
       $form.transloadit(opts.transloadit);
 
       // attach for tab + enter accessibility

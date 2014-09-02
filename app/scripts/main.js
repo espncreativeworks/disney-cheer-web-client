@@ -22,6 +22,12 @@ jQuery(document).ready(function($){
   $('[data-control-action="share-facebook"]').on('click', onFacebookShare);
   $('[data-control-action="share-twitter"]').on('click', onTwitterShare);
 
+  // auto scroll, start video
+  $('[data-action="play-how-to-video"]').on('click', autoScrollAndStartVideo);
+
+  // form validation
+  $('[data-form-name="confirm"]').on('change', '[type="checkbox"].optin', onOptinChange);
+
   // play audio tracks
   $('#music').on('click', '[data-control-action="toggle-audio"]', function(e){
     var $this = $(e.target)
@@ -55,6 +61,33 @@ jQuery(document).ready(function($){
 
   // track routine downloads
   $('body.guidelines #welcome').on('click', '[data-control-action="download"]', trackGuidelinesDownload);
+
+  function autoScrollAndStartVideo (e){
+    e.preventDefault();
+
+    var $btn = $(this)
+      , $videoSection = $($btn.attr('href'))
+      , padding = 44;
+
+    $('html, body').animate({ scrollTop: ($videoSection.offset().top - padding) + 'px' }, 250);
+    $videoSection.find('video').get(0).play();
+  }
+
+  function onOptinChange (e){
+    var $form = $(e.target).parents('form').first()
+      , $input = $(e.target)
+      , $feedback = $input.parent().find('.optin-copy .feedback')
+      , $submit = $form.find('[data-control-action="submit"]');
+
+    if ($input.attr('required') && $input.is(':checked')){
+      $feedback.hide();
+      $submit.removeClass('disabled').removeAttr('disabled');
+    } else {
+      $feedback.show();
+      $submit.addClass('disabled').attr('disabled', true);
+
+    }
+  }
 
   function trackAudioDownload (e){
     var $track = $(e.target)

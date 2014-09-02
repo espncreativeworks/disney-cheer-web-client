@@ -51,8 +51,8 @@
           <h6 class="section-tag">Cheer On Your</h6>
           <h1 class="section-title">Disney Side</h1>
           <h3 class="section-subtitle">Confirm Your Info</h3>
-          <p class="section-details">
-            <form data-form-name="confirm" method="post" action="http://promo.espn.go.com/espn/contests/chevy/2014/" class="form-inline auth">
+          <div class="section-details confirm-form-container">
+            <form data-form-name="confirm" method="post" action="http://promo.espn.go.com/espn/contests/chevy/2014/" class="form-inline auth text-left">
               <div class="row">
                 <div class="col-xs-12">
                   <dl class="dl-horizontal">
@@ -73,8 +73,8 @@
                 <div class="controls">
 
                   <label class="checkbox" for="ESPNPromo_Disney_090214_legal">
-                    <input type="checkbox" name="ESPNPromo_Disney_090214_legal" id="ESPNPromo_Disney_090214_legal" class="optin" value="true">
-                    <span class="optin-copy">I have read and agree to the <a href="">official rules</a>.</span>
+                    <input type="checkbox" name="ESPNPromo_Disney_090214_legal" id="ESPNPromo_Disney_090214_legal" class="optin" value="true" required>
+                    <span class="optin-copy">I have read and agree to the <a href="">official rules</a>. <i class="fa fa-exclamation-triangle feedback text-warning" title="This is a required field." style="margin-left: 8px; font-size: 1.2em;"></i></span>
                   </label>
 
                   <label class="checkbox" for="ESPNPromo_Disney_090214_tpt">
@@ -91,14 +91,14 @@
                   <input type="hidden" name="skipped" value="true">
                 </div>
               </div>
-              <div class="control-group">
+              <div class="control-group main-controls text-center">
                 <div class="controls">
                   <button type="button" class="btn btn-disney btn-danger logout" data-control-action="logout">Logout</button>
-                  <a href="upload.html" class="btn btn-disney confirm" data-btn-name="confirm" data-control-action="submit">Confirm</a>
+                  <a href="upload.html" class="btn btn-disney confirm disabled" disabled data-btn-name="confirm" data-control-action="submit">Confirm</a>
                 </div>
               </div>
             </form>
-          </p>
+          </div>
         </div>
         <div class="col-xs-3 gutterless">
           <div class="ribbon-container" data-rotation-angle="35deg">

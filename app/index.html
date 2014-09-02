@@ -18,16 +18,17 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+  <!--
   <div id="bg-container" class="visible-lg">
-    <!--
     <video id="bg-video" muted autoplay loop preload="auto">
       <source type="video/mp4" src="video/bg_varsity.mp4">
       <source type="video/webm" src="video/bg_varsity.webm">
       <source type="video/ogg" src="video/bg_varsity.ogv">
     </video>
-    -->
+
   </div>
-  <div id="body-container">
+  -->
+  <!-- <div id="body-container"> -->
     <div class="container">
       <div id="header" class="row">
         <div class="col-xs-12">
@@ -51,7 +52,7 @@
           <h6 class="section-tag">Cheer On Your</h6>
           <h1 class="section-title">Disney Side</h1>
           <h3 class="section-subtitle">You and your team <br>could win a <strong>$100,000 Grant</strong> for your spirit program!</h3>
-          <p class="section-details">Your team spirit could be the winning ticket to a <strong>$100,000 Grant</strong> for your spirit program and a trip to the <em>Walt Disney World<sup class="reg">&reg;</sup></em> Resort. Create a fun and spirited :30 Disney Parks inspired routine showing how you feel when you visit one of the Parks. Show Us Your Disney Side!</p>
+          <p class="section-details">Your team spirit could be the winning ticket to a <strong>$100,000 Grant</strong> for your spirit program and a trip to the <em>Walt Disney World<sup class="reg">&reg;</sup></em> Resort. Create a fun and spirited :30 Disney Parks inspired routine showing how you feel when you visit one of the Parks. <br>Show Us Your Disney Side!</p>
         </div>
         <div class="col-xs-3 gutterless">
           <div class="ribbon-container" data-rotation-angle="35deg">
@@ -63,7 +64,7 @@
         <div class="col-xs-6">
           <div class="controls-container">
             <div class="control text-center">
-                <a href="confirm.html" class="btn btn-disney">Get Started!</a>
+              <a href="#how-to" data-action="play-how-to-video" class="btn btn-lg btn-disney">Learn More!</a>
             </div>
           </div>
         </div>
@@ -107,7 +108,7 @@
               <!-- <li>Check out this video for inspiration.</li> -->
               <li>Download one of the Disney Park attraction Remixes below to use for your :30 routine.</li>
               <li>Create a cool and unique routine based off the feeling you have when you visit a Disney Park.</li>
-              <li>Comeback on Sept. 3 - Nov. 11 to upload your routine.</li>
+              <li>Upload your routine by November 10th.</li>
               <li>See <a href="guidelines.html" class="no-decoration" title="Routine Criteria">routine criteria</a> / <a href="rules.html" class="no-decoration" title="Contest Rules">contest rules</a> for details.</li>
             </ol>
             <p>This is not a skills based competition so be creative and have fun!!!</p>
@@ -186,13 +187,12 @@
         <div class="col-xs-10 col-xs-offset-1 section-content">
           <div class="row">
             <div class="col-xs-12 col-sm-7">
-              <h1 class="section-title">Remind Me</h1>
-              <p class="section-details">I pledge to cheer on my Disney Side!</p>
-              <p class="section-details">I can't wait to show my school spirit with a fun routine - yes, sign me up for future updates regarding this promotion.</p>
+              <h1 class="section-title">Get Started</h1>
+              <p class="section-details">Ready to cheer on your Disney Side? Get started here!</p>
             </div>
             <div class="col-xs-12 col-sm-5">
               <div class="cta-container">
-                <a href="javascript:void(0);" class="btn btn-disney btn-block" title="Sign Me Up">Sign Me Up</a>
+                <a href="confirm.html" class="btn btn-disney btn-block" title="Get Started">Get Started</a>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 
   <!-- Google Analytics -->
   <script>
@@ -249,10 +249,15 @@
   <script src="scripts/vendor/bootstrap.js"></script>
   <script src="scripts/vendor/fastclick.js"></script>
   <script src="bower_components/loglevel/dist/loglevel.js"></script>
+  <script src="bower_components/mimer/dist/mimer.min.js"></script>
   <!-- endbuild -->
+
+  <script src="//assets.transloadit.com/js/jquery.transloadit2-v2-latest.js"></script>
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
+  <script src="scripts/utils/human-readable.js"></script>
+  <script src="scripts/upload.js"></script>
   <!-- endbuild -->
 
 </body>

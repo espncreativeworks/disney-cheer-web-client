@@ -8,3 +8,14 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+.btn-disney.btn-lg {
+  padding: 15px 27px;
+  font-size: 1em;
+}
+
+@media (min-width: $screen-sm-min){
+  .btn-disney.btn-lg {
+    font-size: 1.7em;
+  }
+}
