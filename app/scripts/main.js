@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
   $('[data-action="play-how-to-video"]').on('click', autoScrollAndStartVideo);
 
   // form validation
-  $('[data-form-name="confirm"]').on('change', '[type="checkbox"].optin', onOptinChange);
+  $('[data-form-name="confirm"]').on('change', '[name="ESPNPromo_Disney_090214_legal"].optin', onLegalChange);
 
   // play audio tracks
   $('#music').on('click', '[data-control-action="toggle-audio"]', function(e){
@@ -73,7 +73,7 @@ jQuery(document).ready(function($){
     $videoSection.find('video').get(0).play();
   }
 
-  function onOptinChange (e){
+  function onLegalChange (e){
     var $form = $(e.target).parents('form').first()
       , $input = $(e.target)
       , $feedback = $input.parent().find('.optin-copy .feedback')
@@ -85,7 +85,6 @@ jQuery(document).ready(function($){
     } else {
       $feedback.show();
       $submit.addClass('disabled').attr('disabled', true);
-
     }
   }
 

@@ -38,6 +38,11 @@ $welcome-section-subtitle-font-size-sm: $welcome-section-subtitle-font-size * $s
 $welcome-section-tag-font-size-sm: $welcome-section-tag-font-size * $section-scale-factor;
 $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section-scale-factor;
 
+$how-to-video-min-height: 144px;
+$how-to-video-min-height-sm: 144px;
+$how-to-video-min-height-md: 288px;
+$how-to-video-min-height-lg: 432px;
+
 .section {
   position: relative;
   max-width: $disney-section-max-width;
@@ -136,6 +141,7 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
 
       .video-player {
         width: 100%;
+        min-height: $how-to-video-min-height;
         height: auto;
       }
     }
@@ -237,6 +243,12 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
       .ribbon-container {
         padding-bottom: $section-padding-sm;
       }
+      .video-container {
+
+        .video-player {
+          min-height: $how-to-video-min-height-sm;
+        }
+      }
     }
 
     &#about {
@@ -269,10 +281,39 @@ $welcome-section-tag-line-height-sm: $welcome-section-tag-line-height * $section
   }
 }
 
-/*
-@media (min-width: $screen-lg-min){
+
+@media (min-width: $screen-sm-min){
   .section {
-    background-color: transparentize($section-bg-color, 0.4);
+    &#how-to {
+      .video-container {
+        .video-player {
+          min-height: $how-to-video-min-height-sm;
+        }
+      }
+    }
   }
 }
-*/
+
+@media (min-width: $screen-md-min){
+  .section {
+    &#how-to {
+      .video-container {
+        .video-player {
+          min-height: $how-to-video-min-height-md;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  .section {
+    &#how-to {
+      .video-container {
+        .video-player {
+          min-height: $how-to-video-min-height-lg;
+        }
+      }
+    }
+  }
+}
